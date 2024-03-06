@@ -7,19 +7,20 @@ class DoublyCircularLinkedList:
 
     def print_list(self):
         if not self.head:
+            print("La lista esta vacia")
             return
 
         current = self.head
-        while current:
-            print(current.data, end=" ")
+        while True:
+            print(f" Titulo: {current.title}, Director: {current.director}, Año: {current.year}", end="")
             current = current.next
 
             if current == self.head:
                 break
         print()
 
-    def insert_at_start(self, data):
-        new_node = Node(data)
+    def insert_at_start(self, title, director, year):
+        new_node = Node(title, director, year)
 
         if not self.head:
             self.head = new_node
@@ -33,14 +34,14 @@ class DoublyCircularLinkedList:
             self.prev.next = new_node
             self.head = new_node
 
-    def delete(self, data):
+    def delete(self, title, director, year):
         if not self.head:
             return
 
         current = self.head
 
         while True:
-            if current.data == data:
+            if current.title == title and current.director == director and current.year == year:
                 break
             current = current.next
             if current == self.head:

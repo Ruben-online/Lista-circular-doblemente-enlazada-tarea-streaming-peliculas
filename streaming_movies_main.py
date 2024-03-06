@@ -5,13 +5,11 @@ doubly_circular_linked_list = DoublyCircularLinkedList()
 while True:
     title = "Menu Streaming"
     print("\n" + title + "\n" + len(title) * '-')
-    print("1. ")
-    print("2. ")
-    print("3. ")
-    print("4. ")
-    print("5. ")
-    print("6. ")
-    print("7. Salir del programa")
+    print("1. Navegar")
+    print("2. Ver previsualizaciones ")
+    print("3. Historial")
+    print("4. Seguir viendo")
+    print("5. Salir del programa")
 
     streaming_menu = input("\nIngrese una opcion: ")
 
@@ -28,12 +26,6 @@ while True:
         pass
 
     elif streaming_menu == "5":
-        pass
-
-    elif streaming_menu == "6":
-        pass
-
-    elif streaming_menu == "7":
         print("Saliendo del programa...")
         break
     else:
